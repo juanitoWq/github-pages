@@ -15,10 +15,10 @@
             overflow: hidden;
         }
         .message {
-            font-size: 24px;
+            font-size: 33.6px; /* Aumento del 40% (24px * 1.4) */
             font-family: 'Arial', sans-serif;
             color: #333;
-            margin-top: 20px;
+            margin-top: 28px; /* Aumento del 40% */
             opacity: 0;
             animation: fadeInMessage 1s 3s forwards; /* Aparece después de 3 segundos */
             display: flex;
@@ -33,30 +33,30 @@
             animation: fadeInSunflower 2s forwards; /* Aparece en 2 segundos */
         }
         .stem {
-            width: 10px;
-            height: 120px;
+            width: 14px; /* Aumento del 40% (10px * 1.4) */
+            height: 168px; /* Aumento del 40% (120px * 1.4) */
             background-color: green;
         }
         .flower {
             position: relative;
-            width: 100px;
-            height: 100px;
+            width: 140px; /* Aumento del 40% (100px * 1.4) */
+            height: 140px; /* Aumento del 40% (100px * 1.4) */
             display: flex;
             justify-content: center;
             align-items: center;
             animation: spin 5s linear infinite;
         }
         .petal {
-            width: 30px;
-            height: 60px;
+            width: 42px; /* Aumento del 40% (30px * 1.4) */
+            height: 84px; /* Aumento del 40% (60px * 1.4) */
             background-color: yellow;
             border-radius: 50%;
             position: absolute;
             z-index: 1; /* Los pétalos están por debajo */
         }
         .center {
-            width: 40px;
-            height: 40px;
+            width: 56px; /* Aumento del 40% (40px * 1.4) */
+            height: 56px; /* Aumento del 40% (40px * 1.4) */
             background-color: brown;
             border-radius: 50%;
             position: absolute;
@@ -75,8 +75,8 @@
             100% { opacity: 1; }
         }
         .batman-emoji {
-            font-size: 30px; /* Tamaño del emoji */
-            margin-left: 10px; /* Espacio entre el logo y el corazón */
+            font-size: 42px; /* Aumento del 40% (30px * 1.4) */
+            margin-left: 14px; /* Aumento del 40% (10px * 1.4) */
         }
     </style>
 </head>
@@ -89,14 +89,14 @@
                 for(let i = 0; i < 8; i++) {
                     let petal = document.createElement('div');
                     petal.className = 'petal';
-                    petal.style.transform = `rotate(${i * 45}deg) translate(0, -20px)`;
+                    petal.style.transform = `rotate(${i * 45}deg) translate(0, -28px)`; /* Aumento del 40% */
                     flower.appendChild(petal);
                 }
             </script>
         </div>
         <div class="stem"></div>
     </div>
-    <p class="message">I Love You ❤️ 
+    <p class="message">hola nat ❤️ 
         <span class="batman-emoji">🦇</span>
     </p>
 </body>
