@@ -4,80 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Girasol Animado</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #fdf6e3;
-            flex-direction: column;
-        }
-        .message {
-            font-size: 24px;
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .sunflower {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .stem {
-            width: 10px;
-            height: 100px;
-            background-color: green;
-        }
-        .flower {
-            position: relative;
-            width: 100px;
-            height: 100px;
-        }
-        .petal {
-            width: 30px;
-            height: 60px;
-            background-color: yellow;
-            border-radius: 50%;
-            position: absolute;
-            top: 20px;
-            left: 35px;
-            transform-origin: center bottom;
-        }
-        .center {
-            width: 40px;
-            height: 40px;
-            background-color: brown;
-            border-radius: 50%;
-            position: absolute;
-            top: 30px;
-            left: 30px;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .flower {
-            animation: spin 5s linear infinite;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p class="message">I Love You ❤️</p>
-    <div class="sunflower">
-        <div class="flower">
-            <div class="center"></div>
-            <div class="petal" style="transform: rotate(0deg);"></div>
-            <div class="petal" style="transform: rotate(45deg);"></div>
-            <div class="petal" style="transform: rotate(90deg);"></div>
-            <div class="petal" style="transform: rotate(135deg);"></div>
-            <div class="petal" style="transform: rotate(180deg);"></div>
-            <div class="petal" style="transform: rotate(225deg);"></div>
-            <div class="petal" style="transform: rotate(270deg);"></div>
-            <div class="petal" style="transform: rotate(315deg);"></div>
+    <div class="container">
+        <p class="message">I Love You ❤️</p>
+        <div class="sunflower">
+            <div class="stem"></div>
+            <div class="flower">
+                <div class="petal"></div>
+                <div class="center"></div>
+            </div>
         </div>
-        <div class="stem"></div>
     </div>
 </body>
 </html>
