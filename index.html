@@ -4,18 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Girasol Animado</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fdf6e3;
+            flex-direction: column;
+        }
+        .message {
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .sunflower {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .stem {
+            width: 10px;
+            height: 120px;
+            background-color: green;
+        }
+        .flower {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: spin 5s linear infinite;
+        }
+        .petal {
+            width: 30px;
+            height: 60px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .center {
+            width: 40px;
+            height: 40px;
+            background-color: brown;
+            border-radius: 50%;
+            position: absolute;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <p class="message">I Love You ❤️</p>
-        <div class="sunflower">
-            <div class="stem"></div>
-            <div class="flower">
-                <div class="petal"></div>
-                <div class="center"></div>
-            </div>
+    <p class="message">I Love You ❤️</p>
+    <div class="sunflower">
+        <div class="flower">
+            <div class="center"></div>
+            <script>
+                const flower = document.querySelector('.flower');
+                for(let i = 0; i < 8; i++) {
+                    let petal = document.createElement('div');
+                    petal.className = 'petal';
+                    petal.style.transform = `rotate(${i * 45}deg) translate(0, -20px)`;
+                    flower.appendChild(petal);
+                }
+            </script>
         </div>
+        <div class="stem"></div>
     </div>
 </body>
 </html>
